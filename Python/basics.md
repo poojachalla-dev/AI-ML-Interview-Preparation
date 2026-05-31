@@ -183,5 +183,315 @@ Benefits:
 * Enforces clean code structure
 * Eliminates the need for braces
 
+---
+
+## 11. What is the difference between a statement and an expression?
+
+### Answer
+
+An expression is a piece of code that evaluates to a value.
+
+Examples:
+
+```python
+5 + 3
+name.upper()
+len([1, 2, 3])
 ```
+
+A statement performs an action but does not necessarily return a value.
+
+Examples:
+
+```python
+x = 10
+if x > 5:
+    print(x)
 ```
+
+### Key Interview Points
+
+* Expressions produce values.
+* Statements perform actions.
+* Every expression can be part of a statement.
+
+---
+
+## 12. What is a variable?
+
+### Answer
+
+A variable is a name that references an object stored in memory.
+
+Example:
+
+```python
+name = "Pooh"
+age = 22
+```
+
+Python variables are references to objects, not containers holding values directly.
+
+### Key Interview Points
+
+* Variables store references to objects.
+* No explicit type declaration is required.
+* Types are determined at runtime.
+
+---
+
+## 13. How does variable assignment work in Python?
+
+### Answer
+
+Assignment binds a variable name to an object.
+
+Example:
+
+```python
+x = 10
+y = x
+```
+
+Both variables reference the same object until one is reassigned.
+
+### Key Interview Points
+
+* Assignment creates references.
+* Python does not copy objects during simple assignment.
+* Multiple variables can reference the same object.
+
+---
+
+## 14. What are Python comments?
+
+### Answer
+
+Comments are used to explain code and are ignored by the interpreter.
+
+Single-line comment:
+
+```python
+# This is a comment
+```
+
+Multi-line comment:
+
+```python
+"""
+This is a
+multi-line comment
+"""
+```
+
+### Key Interview Points
+
+* Improve code readability.
+* Ignored during execution.
+* Triple quotes are commonly used for multi-line comments and docstrings.
+
+---
+
+## 15. What is the difference between mutable and immutable objects?
+
+### Answer
+
+Mutable objects can be modified after creation.
+
+Examples:
+
+* list
+* dict
+* set
+
+Immutable objects cannot be modified after creation.
+
+Examples:
+
+* int
+* float
+* str
+* tuple
+
+Example:
+
+```python
+lst = [1, 2]
+lst.append(3)
+
+s = "hello"
+# s[0] = "H"  # Error
+```
+
+### Key Interview Points
+
+* Mutable objects can change in place.
+* Immutable objects create new objects when modified.
+* Important for understanding memory behavior.
+
+---
+
+## 16. What are Python's built-in data types?
+
+### Answer
+
+Numeric Types:
+
+* int
+* float
+* complex
+
+Sequence Types:
+
+* str
+* list
+* tuple
+
+Set Types:
+
+* set
+* frozenset
+
+Mapping Type:
+
+* dict
+
+Boolean Type:
+
+* bool
+
+Binary Types:
+
+* bytes
+* bytearray
+* memoryview
+
+### Key Interview Points
+
+* Python provides multiple built-in data structures.
+* Each type serves different use cases.
+* Understanding mutability is important.
+
+---
+
+## 17. What is type conversion?
+
+### Answer
+
+Type conversion is the process of converting one data type into another.
+
+Python supports:
+
+1. Implicit conversion
+2. Explicit conversion
+
+Example:
+
+```python
+x = 5
+y = 2.5
+
+result = x + y
+```
+
+The integer is automatically converted to a float.
+
+### Key Interview Points
+
+* Implicit conversion is automatic.
+* Explicit conversion is performed by the programmer.
+* Prevents type mismatch issues.
+
+---
+
+## 18. What is type casting?
+
+### Answer
+
+Type casting is the explicit conversion of one data type into another.
+
+Example:
+
+```python
+num = "100"
+
+x = int(num)
+y = float(num)
+```
+
+Common casting functions:
+
+```python
+int()
+float()
+str()
+list()
+tuple()
+set()
+dict()
+```
+
+### Key Interview Points
+
+* Controlled by the programmer.
+* Useful for data processing and input handling.
+* Can raise exceptions for invalid conversions.
+
+---
+
+## 19. What is duck typing?
+
+### Answer
+
+Duck typing is a concept where an object's suitability is determined by the presence of methods and attributes rather than its actual type.
+
+Example:
+
+```python
+class Duck:
+    def speak(self):
+        print("Quack")
+
+class Person:
+    def speak(self):
+        print("Hello")
+
+def make_sound(obj):
+    obj.speak()
+```
+
+Both objects work because they provide the required method.
+
+### Key Interview Points
+
+* Focuses on behavior rather than type.
+* Supports Python's dynamic nature.
+* Commonly asked in OOP interviews.
+
+---
+
+## 20. What is the Zen of Python?
+
+### Answer
+
+The Zen of Python is a collection of guiding principles for writing Python code.
+
+View it using:
+
+```python
+import this
+```
+
+Some principles include:
+
+* Beautiful is better than ugly.
+* Explicit is better than implicit.
+* Simple is better than complex.
+* Readability counts.
+* Errors should never pass silently.
+
+### Key Interview Points
+
+* Represents Python's design philosophy.
+* Encourages clean and maintainable code.
+* Frequently referenced by experienced Python developers.
