@@ -495,3 +495,579 @@ Some principles include:
 * Represents Python's design philosophy.
 * Encourages clean and maintainable code.
 * Frequently referenced by experienced Python developers.
+
+---
+
+## 21. What is the difference between == and is?
+
+### Answer
+
+`==` compares the values of two objects, while `is` compares their identities (memory locations).
+
+Example:
+
+```python
+a = [1, 2]
+b = [1, 2]
+
+a == b  # True
+a is b  # False
+```
+
+### Key Interview Points
+
+* Use `==` for value comparison.
+* Use `is` for identity comparison.
+* Commonly used with `None`.
+
+---
+
+## 22. What is the difference between shallow copy and deep copy?
+
+### Answer
+
+A shallow copy creates a new object but references nested objects. A deep copy recursively copies all nested objects.
+
+Example:
+
+```python
+import copy
+
+a = [[1, 2]]
+b = copy.copy(a)
+c = copy.deepcopy(a)
+```
+
+### Key Interview Points
+
+* Shallow copy shares nested references.
+* Deep copy creates independent copies.
+* Important for mutable objects.
+
+---
+
+## 23. What happens when you execute a Python file?
+
+### Answer
+
+1. Source code is parsed.
+2. Code is compiled into bytecode.
+3. Bytecode is executed by the Python Virtual Machine.
+4. Output is produced.
+
+### Key Interview Points
+
+* Python is interpreted but uses bytecode internally.
+* Compilation and execution are separate steps.
+
+---
+
+## 24. What is a namespace in Python?
+
+### Answer
+
+A namespace is a mapping between names and objects.
+
+Examples:
+
+* Built-in namespace
+* Global namespace
+* Local namespace
+
+### Key Interview Points
+
+* Prevents naming conflicts.
+* Implemented as dictionaries internally.
+
+---
+
+## 25. What are local and global variables?
+
+### Answer
+
+Local Variable:
+Declared inside a function.
+
+Global Variable:
+Declared outside a function.
+
+Example:
+
+```python
+x = 100
+
+def func():
+    y = 10
+```
+
+### Key Interview Points
+
+* Local variables exist within a function.
+* Global variables are accessible throughout the module.
+
+---
+
+## 26. What is the LEGB Rule?
+
+### Answer
+
+Python resolves names in the following order:
+
+1. Local
+2. Enclosing
+3. Global
+4. Built-in
+
+### Key Interview Points
+
+* Determines variable lookup order.
+* Frequently asked in scope-related questions.
+
+---
+
+## 27. What are Python's memory management mechanisms?
+
+### Answer
+
+Python manages memory automatically using:
+
+* Private heap
+* Reference counting
+* Garbage collection
+
+### Key Interview Points
+
+* Memory allocation handled internally.
+* Developers rarely manage memory manually.
+
+---
+
+## 28. What is garbage collection?
+
+### Answer
+
+Garbage collection removes objects that are no longer reachable.
+
+Python uses a cyclic garbage collector to clean up reference cycles.
+
+### Key Interview Points
+
+* Prevents memory leaks.
+* Works alongside reference counting.
+
+---
+
+## 29. What are reference counts?
+
+### Answer
+
+Every object keeps track of how many references point to it.
+
+When the count becomes zero, memory can be reclaimed.
+
+Example:
+
+```python
+x = []
+y = x
+```
+
+The list now has two references.
+
+### Key Interview Points
+
+* Core memory management mechanism.
+* Managed automatically.
+
+---
+
+## 30. What is object interning?
+
+### Answer
+
+Python reuses certain immutable objects to improve performance and memory usage.
+
+Example:
+
+```python
+a = 10
+b = 10
+
+a is b
+```
+
+Often returns `True`.
+
+### Key Interview Points
+
+* Common for small integers and strings.
+* Optimization technique.
+
+---
+
+## 31. What is dynamic memory allocation?
+
+### Answer
+
+Memory is allocated during program execution rather than at compile time.
+
+### Key Interview Points
+
+* Supports flexible object creation.
+* Managed automatically by Python.
+
+---
+
+## 32. How are arguments passed in Python?
+
+### Answer
+
+Python uses pass-by-object-reference (also called pass-by-assignment).
+
+Objects are passed by reference, but variable bindings remain local.
+
+### Key Interview Points
+
+* Not pass-by-value.
+* Not traditional pass-by-reference.
+
+---
+
+## 33. What is pass-by-object-reference?
+
+### Answer
+
+Function parameters receive references to objects.
+
+Example:
+
+```python
+def add_item(lst):
+    lst.append(10)
+```
+
+Changes affect the original list because lists are mutable.
+
+### Key Interview Points
+
+* Important for understanding side effects.
+* Behavior depends on mutability.
+
+---
+
+## 34. What is monkey patching?
+
+### Answer
+
+Monkey patching means modifying classes or modules at runtime.
+
+Example:
+
+```python
+class A:
+    pass
+
+A.name = "Python"
+```
+
+### Key Interview Points
+
+* Useful but should be used carefully.
+* Can make code harder to maintain.
+
+---
+
+## 35. What is introspection in Python?
+
+### Answer
+
+Introspection is the ability to examine objects at runtime.
+
+Common functions:
+
+```python
+type()
+dir()
+id()
+isinstance()
+```
+
+### Key Interview Points
+
+* Useful for debugging.
+* Supports Python's dynamic nature.
+
+---
+
+## 36. What are **name** and **main**?
+
+### Answer
+
+`__name__` is a special variable automatically set by Python.
+
+When a file is executed directly:
+
+```python
+__name__ == "__main__"
+```
+
+When imported:
+
+```python
+__name__ == "module_name"
+```
+
+### Key Interview Points
+
+* Used to determine execution context.
+
+---
+
+## 37. Why use if **name** == "**main**"?
+
+### Answer
+
+It ensures code runs only when the file is executed directly.
+
+Example:
+
+```python
+if __name__ == "__main__":
+    main()
+```
+
+### Key Interview Points
+
+* Prevents unintended execution during imports.
+* Common interview question.
+
+---
+
+## 38. What is the difference between Python 2 and Python 3?
+
+### Answer
+
+Major differences:
+
+* Python 3 uses `print()`
+* Better Unicode support
+* Different integer division behavior
+* Improved libraries and syntax
+
+### Key Interview Points
+
+* Python 2 reached end-of-life in 2020.
+* Modern development uses Python 3.
+
+---
+
+## 39. What are annotations in Python?
+
+### Answer
+
+Annotations provide metadata about variables, parameters, and return types.
+
+Example:
+
+```python
+x: int = 10
+```
+
+### Key Interview Points
+
+* Do not enforce types.
+* Used by tools and linters.
+
+---
+
+## 40. What are type hints?
+
+### Answer
+
+Type hints specify expected data types.
+
+Example:
+
+```python
+def add(a: int, b: int) -> int:
+    return a + b
+```
+
+### Key Interview Points
+
+* Improve readability.
+* Help static type checkers.
+
+---
+
+## 41. What are descriptors?
+
+### Answer
+
+Descriptors are objects that define how attribute access is handled using:
+
+```python
+__get__()
+__set__()
+__delete__()
+```
+
+### Key Interview Points
+
+* Power properties and methods.
+* Advanced OOP concept.
+
+---
+
+## 42. What are metaclasses?
+
+### Answer
+
+A metaclass is a class whose instances are classes.
+
+Python uses:
+
+```python
+type
+```
+
+as the default metaclass.
+
+### Key Interview Points
+
+* Control class creation.
+* Rarely used but frequently asked in advanced interviews.
+
+---
+
+## 43. How does Python's import system work?
+
+### Answer
+
+When importing:
+
+1. Checks cache (`sys.modules`)
+2. Searches module paths
+3. Loads module
+4. Executes module code
+5. Stores module in cache
+
+### Key Interview Points
+
+* Modules load only once per process.
+
+---
+
+## 44. What happens internally during import?
+
+### Answer
+
+Python:
+
+* Searches module paths
+* Compiles if necessary
+* Executes module code
+* Caches module object
+
+### Key Interview Points
+
+* Cached modules improve performance.
+
+---
+
+## 45. How does Python manage memory internally?
+
+### Answer
+
+Python uses:
+
+* Private heap
+* Memory allocator
+* Reference counting
+* Garbage collector
+
+### Key Interview Points
+
+* Memory is automatically managed.
+* Developers rarely handle allocation directly.
+
+---
+
+## 46. Explain Python's garbage collector generations.
+
+### Answer
+
+Python divides objects into generations:
+
+* Generation 0
+* Generation 1
+* Generation 2
+
+Objects surviving collections move to older generations.
+
+### Key Interview Points
+
+* Older generations are scanned less frequently.
+* Improves performance.
+
+---
+
+## 47. What are weak references?
+
+### Answer
+
+Weak references allow referencing an object without increasing its reference count.
+
+Module:
+
+```python
+import weakref
+```
+
+### Key Interview Points
+
+* Useful for caches.
+* Prevent memory retention.
+
+---
+
+## 48. What is the GIL?
+
+### Answer
+
+The Global Interpreter Lock (GIL) ensures only one thread executes Python bytecode at a time.
+
+### Key Interview Points
+
+* Exists in CPython.
+* Affects CPU-bound multithreading.
+
+---
+
+## 49. Why does Python have a GIL?
+
+### Answer
+
+The GIL simplifies memory management and reference counting, making the interpreter easier to implement.
+
+### Key Interview Points
+
+* Trade-off between simplicity and parallelism.
+
+---
+
+## 50. How can you overcome GIL limitations?
+
+### Answer
+
+Techniques include:
+
+* Multiprocessing
+* Async programming
+* Native extensions (C/C++)
+* Distributed computing
+
+### Key Interview Points
+
+* Multiprocessing is preferred for CPU-bound tasks.
+* Multithreading remains useful for I/O-bound tasks.
