@@ -51,9 +51,7 @@ AI-ML-Interview-Preparation
 ├── 11_MLOps
 ├── 12_System_Design_AI
 │
-├── Projects
-│
-└── CheatSheets
+
 ```
 
 ---
@@ -271,42 +269,6 @@ Topics Covered:
 - Scalability
 - Latency Optimization
 - Production Architecture
-
----
-
-# 💼 Projects
-
-This repository includes hands-on projects ranging from beginner to advanced levels.
-
-Examples:
-
-- House Price Prediction
-- Customer Churn Prediction
-- Credit Card Fraud Detection
-- Recommendation System
-- Image Classification
-- Sentiment Analysis
-- RAG Chatbot
-- AI Agents
-
----
-
-# 📋 Cheat Sheets
-
-Quick revision notes for:
-
-- Python
-- SQL
-- Statistics
-- NumPy
-- Pandas
-- Machine Learning
-- Deep Learning
-- NLP
-- LLMs
-- MLOps
-
-Perfect for last-minute interview preparation.
 
 ---
 
