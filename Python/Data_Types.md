@@ -1,5 +1,3 @@
-# Python Data Types Interview Questions & Answers (1–25)
-
 ## Numbers
 
 ### 1. What are Python's numeric data types?
