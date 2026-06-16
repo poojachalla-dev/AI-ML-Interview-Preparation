@@ -1,5 +1,3 @@
-# AI-ML-Interview-Preparation
-
 # 🚀 AI & ML Interview Preparation Roadmap
 
 <div align="center">
