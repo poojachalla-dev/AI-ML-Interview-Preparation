@@ -2,9 +2,7 @@
 
 # 🚀 AI & ML Interview Preparation Roadmap
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8A2BE2,100:00BFFF&height=250&section=header&text=AI%20%26%20ML%20Interview%20Preparation&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=40"/>
-</p>
+![AI ML Roadmap](https://capsule-render.vercel.app/api?type=waving&color=0:8A2BE2,100:00BFFF&height=250&section=header&text=AI%20%26%20ML%20Interview%20Preparation)
 
 <div align="center">
 
