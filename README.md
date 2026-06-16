@@ -2,8 +2,6 @@
 
 # 🚀 AI & ML Interview Preparation Roadmap
 
-![AI ML Roadmap](https://capsule-render.vercel.app/api?type=waving&color=0:8A2BE2,100:00BFFF&height=250&section=header&text=AI%20%26%20ML%20Interview%20Preparation) 
-
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-Expert-blue?style=for-the-badge&logo=python)
